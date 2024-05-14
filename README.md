@@ -8,7 +8,8 @@ This lab is designed to introduce the concept of honey users—decoy user accoun
 ![generate users](https://github.com/trixiahorner/honeyuser/blob/main/images/h1.png?raw=true)
 <br>
 <br>
-### Step 2: Click on Windows start button and search for *Event View*. When in the Event Viewer, select *Windows Logs* > *Security* and then *Create Custom View*. We are creating a custom filter for the security event log. 
+### Step 2: Create a custom filter for the security event log.
+Click on Windows start button and search for *Event View*. When in the Event Viewer, select *Windows Logs* > *Security* and then *Create Custom View*. 
 ![event viewer](https://github.com/trixiahorner/honeyuser/blob/main/images/h2.png?raw=true)
 <br>
 <br>
@@ -27,7 +28,8 @@ This lab is designed to introduce the concept of honey users—decoy user accoun
 When we click on our new View we will see 4 events associated with the Frank account being created: 
 <br>
 <br>
-### STEP 5: Back in the Windows command prompt, we will spray some passwords on our local system
+### STEP 5: Back in the Windows command prompt, we will simulate a password spray on our local system
+We created a rule that whenever someone accesses the Frank account, it will generate an alarm. So, if an attacker is on our network and attempting to authenticate, we should be alerted. 
 ```
 powershell
 Set-ExecutionPolicy Unrestricted
