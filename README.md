@@ -1,7 +1,7 @@
 # Honey User
 
 ## Introduction
-This lab is designed to introduce the concept of honey users—decoy user accounts that are deliberately created to lure and detect malicious actors attempting to access unauthorized systems. By setting up these deceptive accounts, we can monitor and analyze unauthorized login attempts, providing valuable intelligence on attacker behavior and enhancing our overall security posture.
+This lab, from Antisyphon's Active Defense and Cyber Defense course, is designed to introduce the concept of honey users—decoy user accounts that are deliberately created to lure and detect malicious actors attempting to access unauthorized systems. By setting up these deceptive accounts, we can monitor and analyze unauthorized login attempts, providing valuable intelligence on attacker behavior and enhancing our overall security posture.
 
 ## Walkthrough
 ### STEP 1: In Windows command prompt, navigate to the correct directory. We will run an an automated script, *200-user-gen.bat*, to generate 200 users and our decoy Frank account.
