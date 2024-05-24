@@ -4,7 +4,7 @@
 This lab, from Antisyphon's Active Defense and Cyber Defense course, is designed to introduce the concept of honey users—decoy user accounts that are deliberately created to lure and detect malicious actors attempting to access unauthorized systems. By setting up these deceptive accounts, we can monitor and analyze unauthorized login attempts, providing valuable intelligence on attacker behavior and enhancing our overall security posture.
 
 ## Walkthrough
-### STEP 1: In Windows command prompt, navigate to the correct directory. We will run an an automated script, *200-user-gen.bat*, to generate 200 users and our decoy Frank account.
+### STEP 1: In the Windows command prompt, I navigate to the correct directory. I run an automated script, *200-user-gen.bat*, to generate 200 users and the decoy Frank account.
 ![generate users](https://github.com/trixiahorner/honeyuser/blob/main/images/h1.png?raw=true)
 <br>
 <br>
@@ -25,11 +25,11 @@ Click on Windows start button and search for *Event View*. When in the Event Vie
 <br>
 <br>
 ### Step 4: Press *OK*. When the Save Filter to Custom View box opens, name the filter *Frank* then press *OK*. 
-When we click on our new View we will see 4 events associated with the Frank account being created: 
+When I click on new View I see 4 events associated with the Frank account being created: 
 <br>
 <br>
-### STEP 5: Back in the Windows command prompt, we will simulate a password spray on our local system
-We created a rule that whenever someone accesses the Frank account, it will generate an alarm. So, if an attacker is on our network and attempting to authenticate, we should be alerted. 
+### STEP 5: Back in the Windows command prompt, I simulate a password spray on the local system
+I create a rule that whenever someone accesses the Frank account, it will generate an alarm. So, if an attacker is on the network and attempting to authenticate, an alert will be generated. 
 ```
 powershell
 Set-ExecutionPolicy Unrestricted
@@ -39,7 +39,7 @@ Invoke-LocalPasswordSpray -Password Winter2020
 ![spray](https://github.com/trixiahorner/honeyuser/blob/main/images/h4.png?raw=true)
 <br>
 <br>
-The password spray actually authenticated 6 people, but it didn’t get Frank. This actually doesn’t matter. For our alert to trigger, all that matters is that authentication was *ATTEMPTED*.
+The password spray actually authenticated 6 people, but it didn’t get Frank. This actually doesn’t matter. For the alert to trigger, all that matters is that authentication was *ATTEMPTED*.
 <br>
 <br>
 ### STEP 6: In our Event Viewer, we can see the alerts! 
